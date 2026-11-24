@@ -1,7 +1,36 @@
 {
   "channel": "beta",
-  "updated_at": "2026-11-24T03:01:13.219355+00:00",
+  "updated_at": "2026-11-24T05:42:55.003376+00:00",
   "releases": [
+    {
+      "manifest": {
+        "schema_version": 1,
+        "product": "vexora",
+        "version": "1.0.2-rc.2",
+        "channel": "beta",
+        "released_at": "2026-11-24",
+        "min_upgrade_from": "0.0.0",
+        "severity": "feature",
+        "summary": "Release candidate 2: the updater now works on Docker installations that use the containerd image store.",
+        "notes": "- Updater: images are matched to the signed configuration digest through the registry manifest, so installs work on both Docker image stores (rc.1 was refused on the containerd store with \"image does not match the signed release\"). A moved or tampered tag is still refused.\n- Updater: offline bundles are checked against the signature before `docker load`, by hashing each image configuration in the bundle.\n- Updater: reads the host's registry login (read-only) to pull private release images.\n- Release notes no longer repeat the summary and severity line.\n- Includes everything from 1.0.2-rc.1 (customizable dashboard and new dashboard cards).",
+        "images": {
+          "api": {
+            "ref": "ghcr.io/jakwir12/vexora-api:1.0.2-rc.2",
+            "id": "sha256:69c679963a98856808c9dd98876333205211082f0a2dbc513ffed26ffe18bc59"
+          },
+          "web": {
+            "ref": "ghcr.io/jakwir12/vexora-web:1.0.2-rc.2",
+            "id": "sha256:7b7d81a4cc559a119bd71ced18ebff90bb0c9a962af74362d1706f819b89c687"
+          },
+          "updater": {
+            "ref": "ghcr.io/jakwir12/vexora-updater:1.0.2-rc.2",
+            "id": "sha256:2f186e2d057d5f2fc9b63ba44200f82b492a0fa8f73ef35f8dadc108593cd4b3"
+          }
+        }
+      },
+      "signature": "oVVYSGwlVJm6fS3GQx+NKwACG1f/R8hdwjhrDTidepcyfYFX3wGa2BriuL/sNU5K8EQkyKryhFee1y3p08OpCw==",
+      "key_id": "3465c127a164be72"
+    },
     {
       "manifest": {
         "schema_version": 1,
