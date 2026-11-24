@@ -1,5 +1,35 @@
 {
   "channel": "beta",
-  "updated_at": "2026-11-20T07:12:58+00:00",
-  "releases": []
+  "updated_at": "2026-11-24T03:01:13.219355+00:00",
+  "releases": [
+    {
+      "manifest": {
+        "schema_version": 1,
+        "product": "vexora",
+        "version": "1.0.2-rc.1",
+        "channel": "beta",
+        "released_at": "2026-11-24",
+        "min_upgrade_from": "0.0.0",
+        "severity": "feature",
+        "summary": "Release candidate (beta channel): first release built, signed and published by the release pipeline.",
+        "notes": "Severity: feature\n\nRelease candidate (beta channel): first release built, signed and published by the release pipeline.\n\n- Customizable dashboard: reorder, resize, hide and restore cards; the layout is saved per user.\n- New dashboard cards: alert volume by severity (14 days) with hourly trend, triage funnel, most alerted assets, incident response times and oldest open incidents.\n- Severity colours in charts validated for colour-blind readers in light and dark mode.\n- Updater: pre-flight checks (free disk, database ready, current version healthy) before anything is changed.\n- Builds from source report `<VERSION>-dev` instead of `dev`; fixed an API start-up failure on such builds.",
+        "images": {
+          "api": {
+            "ref": "ghcr.io/jakwir12/vexora-api:1.0.2-rc.1",
+            "id": "sha256:efc9423aee6f60758abfb9bffaaa0fb4165f98a92280dbb966b0b38c492ddc70"
+          },
+          "web": {
+            "ref": "ghcr.io/jakwir12/vexora-web:1.0.2-rc.1",
+            "id": "sha256:80a1b94c547c509916d7c62862a66ed41a2ebb751149992044156d1f457350f9"
+          },
+          "updater": {
+            "ref": "ghcr.io/jakwir12/vexora-updater:1.0.2-rc.1",
+            "id": "sha256:8dc84a71d3f92ccc3eb174df32308a42a49c2b5557f51a9f4e75520561fed9ee"
+          }
+        }
+      },
+      "signature": "tS+7B+nIJ+M3CNd/vLIZL51OFj5U2gzx3vgje/Nq2zvs5LmB1QcTAuMA2MxOtib4ZxVtzk5xrFgsAN/O0MtUDw==",
+      "key_id": "3465c127a164be72"
+    }
+  ]
 }
